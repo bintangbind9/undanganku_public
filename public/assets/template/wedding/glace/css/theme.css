@@ -1,0 +1,344 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: #222;
+}
+html, body{
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+}
+.header{
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-attachment: scroll;
+    background-size: cover;
+    /* height: 40vh; */
+    height: 100%;
+    margin: 0;
+    padding-top: 60vh;
+}
+.header .heading {
+    color: #ffffff;
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: 6em;
+    font-weight: normal;
+    text-shadow: 0 0 10px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .heading .heading-subtext{
+    color: #fff;
+    display: block;
+    font-family: 'Caveat', cursive;
+    font-size: .6em;
+}
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.fixed-button span {
+  background: rgba(20,20,20,.5);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  display: table;
+  text-align: center;
+}
+.fixed-button span i {
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 24px;
+}
+.fixed-button::after {
+    /* content: "\25BE"; */
+    display: block;
+    font-size: 28px;
+    line-height: 0;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    text-align: center;
+}
+.fixed-button:active,
+.fixed-button:hover {
+  background: rgba(20,20,20,.9);
+  text-decoration: none;
+}
+.section{
+    margin: 0 auto;
+    max-width: 800px;
+    /* padding: 1em 2.4em; */
+    padding: 1em 1em;
+}
+.section .sub-heading{
+    font-family: 'Caveat', cursive;
+    font-size: 3em;
+    margin-top: 2em;
+}
+.section .details{
+    margin: 0 auto 8em;
+}
+.section .details .details-heading{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.fas {
+    font-size: 3em;
+    opacity: .8;
+}
+.resort-image{
+    width: 100%
+}
+
+@media only screen and (max-width: 600px) {
+    .header .heading {
+        font-size: 4em;
+    }
+  }
+
+.img-couple {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 200px;
+    margin: 25px 0px;
+}
+
+/* Timeline */
+.timeline-wrapper * {
+    box-sizing: border-box;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #222;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    /* right: -17px; */
+    right: -13px;
+    background-color: white;
+    border: 4px solid #222;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .timeline-container-left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .timeline-container-right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .timeline-container-left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid rgb(226, 226, 226);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgb(226, 226, 226);
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .timeline-container-right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid rgb(226, 226, 226);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(226, 226, 226) transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .timeline-container-right::after {
+    /* left: -16px; */
+    left: -13px;
+  }
+  
+  /* The actual content */
+  .timeline-content {
+    padding: 20px 30px;
+    background-color: rgb(226, 226, 226);
+    position: relative;
+    border-radius: 6px;
+    color: white;
+  }
+
+  .timeline-content h2 {
+    color: #222;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline-container::before {
+    left: 60px;
+    border: medium solid rgb(226, 226, 226);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(226, 226, 226) transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .timeline-container-left::after, .timeline-container-right::after {
+    left: 18px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .timeline-container-right {
+    left: 0%;
+    }
+  }
+/* End Timeline */
+
+/* Footer */
+footer {
+  padding: 40px;
+  background-color: rgb(226, 226, 226);
+  text-align: center;
+}
+/* End Footer */
+
+/* Music Console */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.music-console {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+.music-console span {
+  width: 50px;
+  height: 50px;
+  display: table;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.music-console span i {
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.music-console span:hover {
+  text-decoration: none;
+  outline: none;
+}
+.music-console .rotate {
+  animation: rotation 8s infinite linear;
+}
+/* End Music Console */
+
+/* Invitation Cover */
+.invitation-cover {
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  text-align:center;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.invitation-cover .invitation-cover-content {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+  opacity:0.9;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.invitation-cover .invitation-cover-heading {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.519);
+  opacity: 1;
+  border-radius: 15px;
+}
+.invitation-cover h3 {
+  font-size: 24px;
+}
+.invitation-cover h2 {
+  font-size: 46px;
+}
+/* End Invitation Cover */
+
+/* Loading */
+.loading {
+  width: 100%;
+  height: 70px;
+  background: url(../images/loader.gif) center no-repeat #fff;
+}
+/* End Loading */
